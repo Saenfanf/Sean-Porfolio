@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sean's Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Fixed Banner Section (Initially hidden) -->
+  <div class="banner hidden">
+    <div class="name">Sean's Portfolio</div>
+    <!-- Wrap the button with an anchor tag -->
+    <a href="https://www.instagram.com/sean.filmographics/profilecard/?igsh=MW4ycHZhdTQ4NGVseQ%3D%3D" class="book-now-link">
+      <button class="book-now">Book Now</button>
+    </a>
+  </div>
+
+  <!-- Welcome Section -->
+  <section id="welcome" class="welcome">
+    <div class="content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Creative video and photo editing at its finest.</p>
+      <!-- Wrap the button with an anchor tag -->
+      <a href="https://www.instagram.com/sean.filmographics/profilecard/?igsh=MW4ycHZhdTQ4NGVseQ%3D%3D" class="book-now-link">
+        <button class="book-now">Book Now</button>
+      </a>
+      <video autoplay muted loop id="background-video">
+        <source src="assets/img/Comp 1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-down-container">
+      <span class="scroll-down-text">Scroll Down</span>
+      <div class="scroll-down-arrow">
+        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 16l4-4h-3V4h-2v8H8l4 4z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Button Navigation and Search Bar -->
+  <div class="header hidden">
+    <button id="menu-button" class="menu-button orange">☰</button>
+    <div class="search-bar-container">
+      <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
+    </div>
+  </div>
+
+  <!-- Fullscreen Menu -->
+  <div id="menu-overlay" class="menu-overlay hidden">
+    <ul class="menu-list">
+      <li><a href="#welcome" class="menu-link">Welcome</a></li>
+      <li><a href="#work" class="menu-link">My Work</a></li>
+      <li><a href="#about" class="menu-link">About Me</a></li>
+      <li><a href="#socials" class="menu-link">Socials</a></li>
+    </ul>
+  </div>  
+
+  <!-- My Work Section -->
+  <section id="work" class="section work">
+    <h2>My Work</h2>
+    <div class="gallery">
+      <div class="video-card">
+        <video controls>
+          <source src="assets/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <p>Video Title 1</p>
+          <p>Description or info about this video.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <video controls>
+          <source src="assets/video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <p>Video Title 2</p>
+          <p>Description or info about this video.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <video controls>
+          <source src="assets/video3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <p>Video Title 3</p>
+          <p>Description or info about this video.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-box">
+        <h3>Who Am I</h3>
+        <p>I’m Sean, a passionate video editor...</p>
+      </div>
+      <div class="about-box">
+        <h3>Who I've Worked With</h3>
+        <p>I’ve collaborated with a wide range of clients...</p>
+      </div>
+      <div class="about-box">
+        <h3>Where I’m Studying</h3>
+        <p>Currently studying at XYZ University...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Socials Section -->
+<section id="socials" class="section socials">
+  <h2>Connect With Me</h2>
+
+  <!-- Socials Links -->
+  <ul class="socials-list">
+    <li><a href="https://behance.net" target="_blank">Behance</a></li>
+    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+  </ul>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h3>Send Me a Message</h3>
+    <form id="contact-form">
+      <label for="user-email">Your Email:</label>
+      <input type="email" id="user-email" name="user-email" placeholder="Enter your email" required>
+
+      <label for="user-message">Your Message:</label>
+      <textarea id="user-message" name="user-message" placeholder="Write your message here" required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    <div id="form-status"></div>
+  </div>
+</section>
+
+
+</body>
+</html>

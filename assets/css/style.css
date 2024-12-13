@@ -1,0 +1,632 @@
+x/* Global Styles */
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Banner Section */
+/* Banner Section */
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Initially hidden header */
+.header {
+    visibility: hidden; /* Initially hide the header */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    opacity: 0; /* Start with opacity 0 */
+    transition: visibility 0s 0.3s, opacity 0.3s ease; /* Delay visibility change until opacity transition completes */
+}
+
+/* Class to make header visible */
+.header.visible {
+    visibility: visible; /* Make the header visible */
+    opacity: 1; /* Fade in */
+    transition: opacity 0.3s ease, visibility 0s; /* Immediate visibility change with opacity fade */
+}
+
+
+/* Banner Section */
+/* Initially position the banner off-screen at the top */
+#banner {
+    display: none;
+    position: fixed;
+    top: -100px; /* Start offscreen */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: top 0.5s ease-in-out;
+}
+
+/* Class to trigger the slide-in effect */
+#banner.slide-in {
+    display: block;
+    top: 0; /* Slide to the top of the screen */
+}
+
+/* Class for hiding the banner */
+#banner.hidden {
+    display: none;
+}
+
+
+/* Banner content styles */
+/* Initially hidden banner */
+.banner {
+    visibility: hidden; /* Initially hide the banner */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0; /* Start with opacity 0 */
+    transition: visibility 0s 0.3s, opacity 0.3s ease; /* Delay visibility change until opacity transition completes */
+  }
+  
+  /* Class to make banner visible */
+  .banner.visible {
+    visibility: visible; /* Make the banner visible */
+    opacity: 1; /* Fade in */
+    transition: opacity 0.3s ease, visibility 0s; /* Immediate visibility change with opacity fade */
+  }
+  
+
+.banner .name {
+    font-size: 1.5rem;
+    flex-grow: 1; /* Allow the name to take up available space */
+    text-align: center; /* Center the text horizontally */
+}
+
+.banner .book-now {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: orange;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Other styles remain the same */
+
+/* Search Bar */
+.search-bar-container {
+    position: relative;
+}
+
+.search-bar {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.search-bar:focus {
+    width: 250px;
+    outline: none;
+}
+
+/* Welcome Section */
+.welcome {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable */
+    color: #fff;
+}
+
+.book-now.show {
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Other Section Adjustments */
+.work .book-now {
+    display: none; /* Ensure Book Now button doesn't appear in Work Section */
+}
+
+h1, p {
+    margin: 10px;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place video behind text */
+}
+
+/* Other sections remain the same */
+
+/* Book Now Button in Welcome Section */
+.welcome .book-now {
+    opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start 20px below its normal position */
+  transition: opacity 1s ease, transform 1s ease;
+    background-color: orange;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.welcome .book-now.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide it up to its normal position */
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Header - Menu Button and Search Bar */
+.header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+/* Scroll Down Arrow Styles */
+.scroll-down-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Smooth fade */
+  }
+  
+  .scroll-down-container.hidden {
+    opacity: 0; /* Fade out when the class is added */
+  }
+  
+  .scroll-down-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .scroll-down-arrow {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 165, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-down-arrow svg {
+    fill: white;
+  }
+  
+  .scroll-down-arrow:hover {
+    background-color: rgba(255, 165, 0, 1);
+  }
+  
+  .scroll-down-arrow:active {
+    background-color: rgba(255, 165, 0, 0.9);
+  }  
+
+/* Menu Button */
+.menu-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: orange; /* Set button color to orange */
+}
+
+/* Search Bar */
+.search-bar-container {
+    position: relative;
+}
+
+.search-bar {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.search-bar:focus {
+    width: 250px;
+    outline: none;
+}
+
+/* Fullscreen Menu */
+/* Fullscreen Menu */
+/* Fullscreen Menu */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.771);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+  }
+  
+  /* Add visible class to show the menu */
+  .menu-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  /* Menu Links */
+  .menu-overlay .menu-list {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-overlay .menu-list li {
+    margin: 20px 0;
+  }
+  
+  .menu-overlay .menu-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-overlay .menu-list a:hover {
+    color: rgb(255, 184, 41);
+  }
+  
+/* My Work Section */
+.work {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    min-height: 100vh; /* Ensures full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Gallery Container */
+.gallery {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 30px; /* Adds space between the video cards */
+    width: 100%; /* Ensure it takes up the full width of the section */
+}
+
+/* Video Card Styling */
+.video-card {
+    width: 300px; /* Set a fixed width for consistency */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Make videos responsive */
+video {
+    width: 100%; /* Make video take up full width of card */
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Video info below the video */
+.video-info {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.video-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.video-info p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* About Me Section */
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    min-height: 100vh; /* Ensure full screen height */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    flex-wrap: wrap; /* Ensures content fits smaller screens */
+}
+
+.about-box {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    margin: 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+/* Fade-in animation for About Me section */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Socials Section */
+/* Socials Section */
+.socials {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.socials-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.socials-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.socials-list a:hover {
+    color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: #222;
+    color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: orange;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ff6f00;
+}
+
+.contact-form #form-status {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Animations for scroll reveal */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+
+    
+}
+
+/* About Me Section */
+.about {
+  padding: 80px 20px;
+  background-color: #2c2c2c; /* Dark background */
+  color: white;
+  text-align: center;
+}
+
+.about h2 {
+  color: orange; /* Heading with orange color */
+  margin-bottom: 40px;
+}
+
+/* About Content Box */
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Ensures content fits smaller screens */
+}
+
+.about-box {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  margin: 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background-color: #3c3c3c;
+  opacity: 0; /* Initially hide the text */
+  transform: translateY(50px); /* Slide-in from below */
+  transition: all 0.5s ease;
+}
+
+/* For Each Paragraph within .about-box */
+.about-box p {
+  opacity: 0;
+  transform: translateY(30px); /* Slide from below */
+  transition: all 0.5s ease;
+}
+
+/* Animation for Each Letter (CSS will not handle the exact letter-by-letter, we will need JS for that) */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.1s ease-out;
+}
+
+.about-box.show .letter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.about-box:nth-child(1) {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.about-box:nth-child(2) {
+    animation: fadeUp 1.2s ease-out forwards;
+}
+
+.about-box:nth-child(3) {
+    animation: fadeUp 1.4s ease-out forwards;
+}
+
